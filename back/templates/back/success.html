@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    <!-- ================== BEGIN core-css ================== -->
+    <link href="{% static 'css/vendor/vendor.min.css' %} " rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/vendor/app.min.css' %}" rel="stylesheet" />
+    <!-- ================== END core-css ================== -->
+
+</head>
+
+<body class='pace-top'>
+    <div id="app" class="app app-full-height app-without-header">
+		<div class="login">
+			<div class="login-content">
+                    <h1>Success</h1>
+					<h1 class="text-center">Result Data</h1>
+					<div class="mb-3"></div>
+                    <h3>ID: {{id}}</h3>
+                    <h3>Title: {{title}}</h3>
+                    <h3>Body: {{body}}</h3>
+                    <h3>UserID: {{userId}}</h3>
+
+				</form>
+			</div>
+		</div>
+	</div>
+    <!-- ================== BEGIN core-js ================== -->
+    <script src="{% static 'js/vendor/vendor.min.js' %}"></script>
+    <script src="{% static 'js/vendor/app.min.js' %}"></script>
+    <!-- ================== END core-js ================== -->
+</body>
+
+</html>

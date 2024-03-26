@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    <!-- ================== BEGIN core-css ================== -->
+    <link href="{% static 'css/vendor/vendor.min.css' %} " rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/vendor/app.min.css' %}" rel="stylesheet" />
+    <!-- ================== END core-css ================== -->
+
+</head>
+
+<body class='pace-top'>
+    <div id="app" class="app app-full-height app-without-header">
+		<div class="login">
+			<div class="login-content">
+				<form action="{% url 'back:success' %}" method="POST" name="login_form">
+                    {% csrf_token %}
+					<h1 class="text-center">Fetch Data</h1>
+					<div class="mb-3"></div>
+					<button type="submit" class="btn btn-outline-theme btn-lg d-block w-100 fw-500 mb-3">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+    <!-- ================== BEGIN core-js ================== -->
+    <script src="{% static 'js/vendor/vendor.min.js' %}"></script>
+    <script src="{% static 'js/vendor/app.min.js' %}"></script>
+    <!-- ================== END core-js ================== -->
+</body>
+
+</html>
